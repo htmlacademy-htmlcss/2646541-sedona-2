@@ -2,7 +2,6 @@
 
 * Студент: [Антон Холодов](https://up.htmlacademy.ru/htmlcss-individual/2/user/2646541).
 * Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
-* 
 
 ---
 
