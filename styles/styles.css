@@ -65,7 +65,11 @@ img {
 /* HEADER */
 
 .page-header {
-  padding: 0 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 70px;
 }
 
 .navigation {
@@ -79,13 +83,22 @@ img {
 .navigation-logo {
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: 1;
+  left: 70px;
+  z-index: 10;
+  outline: none;
+}
+
+.navigation-logo:hover .img-logo {
+  opacity: 0.8;
+}
+
+.navigation-logo:focus-visible .img-logo {
+  opacity: 0.6;
 }
 
 .navigation-list {
   margin: 0;
-  margin-left: 168px;
+  margin-left: 238px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -103,8 +116,9 @@ img {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  color: inherit;
+  color: #000000;
   text-decoration: none;
+  outline: none;
 }
 
 .navigation-link:hover {
@@ -156,23 +170,27 @@ img {
   text-decoration: none;
 }
 
-.navigation-user-link:hover svg {
+.navigation-user-link:hover .navigation-user-icon {
   fill: #756157;
 }
 
-.navigation-user-link:focus svg {
+.navigation-user-link:focus .navigation-user-icon {
   fill: #756157;
 }
 
-.navigation-user-link:active svg {
+.navigation-user-link:active .navigation-user-icon {
   fill: rgda(117, 97, 87, 0.3);
 }
-.navigation-user-link svg {
+.navigation-user-icon {
   fill: #000000;
 }
 
-.navigation-favorite-icon {
-  position: absolute;
+.navigation-user-link:hover .navigation-user-icon {
+  opacity: 0.8;
+}
+
+.navigation-user-link:hover .navigation-user-icon {
+  opacity: 0.6;
 }
 
 .likes-number {
@@ -192,6 +210,7 @@ img {
   background: #7DB54F;
   border-radius: 50%;
 }
+
 .button{
   display: inline-block;
   padding: 8px 10px;
