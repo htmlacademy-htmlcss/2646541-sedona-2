@@ -130,7 +130,7 @@ img {
 }
 
 .navigation-link:active {
-  color: arba(117, 97, 87, 0.3);
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-link-current::after {
@@ -176,7 +176,7 @@ img {
 }
 
 .navigation-user-link:active .navigation-user-icon {
-  fill: rgda(117, 97, 87, 0.3);
+  fill: rgba(117, 97, 87, 0.3);
 }
 .navigation-user-icon {
   fill: #000000;
@@ -239,7 +239,7 @@ img {
 }
 
 .button-brown:active {
-  color: rgda(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
 }
 .header-button {
@@ -1245,11 +1245,22 @@ img {
   transition: 0.3s ease-in-out;
 }
 
-.pagination-item:hover {
-  transform: scale(1.1);
+.pagination-item:hover,
+.pagination-item:focus {
+  background-color: #68a2ca;
+}
+
+.pagination-item:active{
+  background-color: #82b3d3;
 }
 
 .pagination-item-current {
+  background-color: #f2f2f2;
+}
+
+.pagination-item-current:hover,
+.pagination-item-current:focus,
+.pagination-item-current:active {
   background-color: #f2f2f2;
 }
 
