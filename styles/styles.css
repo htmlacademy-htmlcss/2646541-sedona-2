@@ -1210,3 +1210,62 @@ toggle-max {
   border-radius: 4px;
   margin: 0;
 }
+.catalog__pagination {
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  max-width: 100px;
+  height: 60px;
+  padding: 0 10px;
+  word-break: none;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #ffffff;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  outline: none;
+}
+
+.pagination__link:hover {
+  border: 2px solid #82B3D3;
+  background-color: #68A2CA;
+}
+
+.pagination__link:focus {
+  border: 2px solid #82B3D3;
+  background-color: #68A2CA;
+}
+
+.pagination__link:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.30);
+}
+
+.pagination-text {
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+  pointer-events: none;
+}
