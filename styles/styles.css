@@ -264,7 +264,7 @@ img {
   z-index: 0;
   overflow: hidden;
   text-align: center;
-  background: rgba(13, 179, 235, 20%) url("../images/bg-header-home.jpg") no-repeat;
+  background: rgb(29, 47, 57) url("../images/bg-header-home.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -356,6 +356,7 @@ img {
 
 .advantages-img {
   display: block;
+  background-color: #b1b6a0;
 }
 
 .advantages-title-text {
@@ -405,6 +406,7 @@ img {
 
 .services-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -491,6 +493,7 @@ img {
 .subscribe-background {
   background: url("../images/background-subscribe.jpg");
   background-size: cover;
+  background-color: #272534;
 }
 
 .section-head-color-white,
@@ -658,6 +661,7 @@ img {
   padding: 35px 70px 70px;
   background: url("../images/bg-header-catalog.jpg") no-repeat, #82b3d3;
   background-size: cover;
+  background-color: #444b51;
   color: #ffffff;
 }
 
@@ -772,7 +776,7 @@ img {
 }
 
 .form-control-label:active {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .form-control-label:not(:last-child) {
@@ -857,7 +861,23 @@ img {
   color: #000000;
   background-color: #f2f2f2;
   border: none;
+  appearance: none;
   -moz-appearance: textfield;
+}
+
+.input-range:hover {
+  background-color: #e5e5e5;
+}
+
+.input-range:focus {
+  outline: 3px solid #83b3d3;
+  background-color: #e5e5e5;
+}
+
+.input-range[type="number"]::-webkit-outer-spin-button,
+.input-range[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .range-input:hover {
@@ -1123,6 +1143,7 @@ img {
 
 .catalog-card-img {
   margin-bottom: 12px;
+  background-color: #82b3d3;
 }
 
 .catalog-card-title {
@@ -1228,9 +1249,6 @@ img {
 }
 
 .pagination-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 60px;
   height: 60px;
   background-color: #82b3d3;
@@ -1267,11 +1285,22 @@ img {
   cursor: initial;
 }
 
+.pagination-item-dots:hover,
+.pagination-item-dots:focus,
+.pagination-item-dots:active {
+  background-color: transparent;
+}
+
 .pagination-item-dots .pagination-link {
   color: #000000;
 }
 
 .pagination-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -1298,7 +1327,6 @@ img {
 
 .modal {
   position: relative;
-  max-height: 600px;
   width: 717px;
   margin: auto;
   padding: 64px 70px;
@@ -1355,12 +1383,13 @@ img {
   background-color: #e5e5e5;
 }
 
-.modal-close-button:focus-visible {
+.modal-close:focus-visible {
   background-color: #e5e5e5;
   outline: 3px solid #83b3d3;
 }
 
-.modal-close-button:active {
+.modal-close:active::before,
+.modal-close:active::after {
   opacity: 0.3;
 }
 
@@ -1379,6 +1408,10 @@ img {
 
 .modal-form-controls .modal-form-row {
   width: 247px;
+}
+
+.modal-form-controls .modal-form-row-right {
+  width: 242px;
 }
 
 .modal-form-row {
@@ -1408,26 +1441,6 @@ img {
   background-position: right 20px center;
   border: none;
   border-radius: 4px;
-}
-
-.modal-input-control::-webkit-input-placeholder {
-  color: #000000;
-  opacity: 0.6;
-}
-
-.modal-input-control::-moz-placeholder {
-  color: #000000;
-  opacity: 0.6;
-}
-
-.modal-input-control:-ms-input-placeholder {
-  color: #000000;
-  opacity: 0.6;
-}
-
-.modal-input-control::-ms-input-placeholder {
-  color: #000000;
-  opacity: 0.6;
 }
 
 .modal-input-control::placeholder {
@@ -1480,6 +1493,8 @@ img {
   line-height: 24px;
   color: #000000;
   cursor: pointer;
+  max-width: 120px;
+  word-break: break-word;
 }
 
 .form-label-children {
@@ -1593,10 +1608,11 @@ img {
 }
 
 .tooltip {
-  position: absolute;
-  width: 26px;
+  position: relative;
+  width: 46px;
+  min-width: 46px;
   height: 26px;
-  margin-left: 64px;
+  margin: 0 auto 0 10px;
 }
 
 .tooltip-toggle {
@@ -1605,6 +1621,8 @@ img {
   margin: 0;
   border: none;
   background-color: transparent;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .tooltip-icon {
@@ -1619,15 +1637,15 @@ img {
   left: 50%;
   display: none;
   width: 256px;
-  padding: 18px 18px 23px 22px;
-  margin-top: 14px;
+  padding: 20px 18px 23px 22px;
+  margin-top: 15px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   border-radius: 10px;
   background-color: #333333;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
-  transform: translateX(-50%);
+  transform: translateX(-54%);
 }
 
 .tooltip-text::before {
@@ -1644,4 +1662,8 @@ img {
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus-visible + .tooltip-text {
   display: block;
+}
+
+.tooltip-toggle:focus-visible {
+  outline: none;
 }
