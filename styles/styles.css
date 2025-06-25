@@ -1473,7 +1473,6 @@ img {
 }
 
 .modal-form .modal-label {
-  grid-column: 1/2;
   margin: 0;
   font-weight: 700;
   font-size: 20px;
@@ -1481,26 +1480,9 @@ img {
   color: #000000;
 }
 
-.modal-form .input-wrapper {
-  grid-column: 2/-1;
-}
-
-.adults {
-  grid-column: 1/2;
-}
-
-.modal-form .population-control-wrapper:first-of-type {
-  grid-column: 2/3;
-}
-
 .form-label-children {
-  grid-column: 3/4;
   margin-left: 88px;
   padding-right: 31px;
-}
-
-.modal-form .population-control-wrapper:last-of-type {
-  grid-column: 4/5;
 }
 
 .quantity-input {
