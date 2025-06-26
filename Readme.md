@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Антон Холодов](https://up.htmlacademy.ru/htmlcss-individual/2/user/2646541).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
+* Сайт: [Мой проект Седона](https://antonkholodov.github.io/2646541-sedona-2/).
 
 ---
 
