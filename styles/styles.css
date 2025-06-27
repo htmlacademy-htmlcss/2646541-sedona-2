@@ -1328,6 +1328,7 @@ img {
 .modal {
   position: relative;
   width: 717px;
+  max-height: 576px;
   margin: auto;
   padding: 64px 70px;
   border-radius: 30px;
@@ -1552,8 +1553,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
   padding: 0;
   border: none;
   border-radius: 4px;
@@ -1566,15 +1567,16 @@ img {
 .button-quantity::after {
   content: "";
   position: absolute;
-  top: 9px;
-  left: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 14px;
   height: 2px;
   background-color: #cdc7c4;
 }
 
 .button-increase::after {
-  transform: rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .button-quantity:hover::before,
@@ -1605,6 +1607,16 @@ img {
   border: none;
   border-radius: 10px;
   background-color: #83b3d3;
+}
+
+.button-big-modal:hover,
+.button-big-modal:focus {
+  background-color: #68a2ca;
+}
+
+.button-big-modal:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68a2ca;
 }
 
 .tooltip {
