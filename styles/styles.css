@@ -101,6 +101,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  max-width: 610px;
 }
 
 .navigation-item {
@@ -146,7 +147,7 @@ img {
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
-  max-width: 176px;
+  max-width: 88px;
   margin: 0 20px 0 auto;
   padding: 0;
   list-style: none;
@@ -410,7 +411,6 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  justify-content: space-between;
 }
 
 .services-item-wide {
@@ -827,6 +827,19 @@ img {
 
 .form-control-radio:focus + .form-control-checkmark {
   outline: 3px solid #83b3d3;
+}
+
+.form-control-label:has(input:disabled) {
+  cursor: default;
+  opacity: 0.3;
+  user-select: none;
+}
+
+.form-control-label:has(input:disabled):hover,
+.form-control-label:has(input:disabled):active,
+.form-control-label:has(input:disabled):focus {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .range-wrapper-inputs {
